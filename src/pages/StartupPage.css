@@ -1,0 +1,189 @@
+.startup-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--burgundy) 0%, #8b2327 50%, var(--gold) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  animation: pageEntrance 0.6s ease-out;
+}
+
+.startup-page.fade-out {
+  animation: pageExit 0.5s ease-in forwards;
+}
+
+.startup-page-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  position: relative;
+}
+
+.title-image {
+  max-width: 90%;
+  max-height: 75%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  animation: imageReveal 1s ease-out;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  animation: fadeInUp 1.5s ease-out 0.8s both;
+}
+
+.scroll-text {
+  color: var(--cream);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.scroll-arrow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.scroll-arrow span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--cream);
+  border-radius: 2px;
+  transform-origin: center;
+}
+
+.scroll-arrow span:nth-child(1) {
+  transform: rotate(45deg) translateX(5px);
+}
+
+.scroll-arrow span:nth-child(2) {
+  width: 20px;
+  margin-left: 2px;
+}
+
+.scroll-arrow span:nth-child(3) {
+  transform: rotate(-45deg) translateX(-5px);
+}
+
+/* Animations */
+@keyframes pageEntrance {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pageExit {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes imageReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .startup-page-content {
+    padding: 1.5rem;
+  }
+
+  .title-image {
+    max-width: 95%;
+    max-height: 70%;
+    border-radius: 15px;
+  }
+
+  .scroll-indicator {
+    bottom: 2rem;
+  }
+
+  .scroll-text {
+    font-size: 1rem;
+  }
+
+  .scroll-arrow span {
+    width: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .startup-page-content {
+    padding: 1rem;
+  }
+
+  .title-image {
+    max-width: 98%;
+    max-height: 65%;
+    border-radius: 10px;
+  }
+
+  .scroll-indicator {
+    bottom: 1.5rem;
+  }
+
+  .scroll-text {
+    font-size: 0.9rem;
+  }
+
+  .scroll-arrow span {
+    width: 18px;
+  }
+}

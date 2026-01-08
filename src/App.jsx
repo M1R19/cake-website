@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { CartProvider } from './context/CartContext';
+import StartupPage from './pages/StartupPage';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -11,6 +13,16 @@ import CustomOrder from './pages/CustomOrder';
 import './App.css';
 
 function App() {
+  const [showStartup, setShowStartup] = useState(true);
+
+  const handleStartupComplete = () => {
+    setShowStartup(false);
+  };
+
+  if (showStartup) {
+    return <StartupPage onComplete={handleStartupComplete} />;
+  }
+
   return (
     <CartProvider>
       <Router>
