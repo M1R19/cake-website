@@ -1,0 +1,160 @@
+.about-page {
+  min-height: 100vh;
+  background-color: var(--color-cream);
+}
+
+.about-header {
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-burgundy) 0%, var(--color-burgundy-dark) 100%);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.about-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.about-content {
+  padding: 4rem 0;
+}
+
+.about-story {
+  background: white;
+  border-radius: 15px;
+  padding: 3rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-story h2 {
+  color: var(--color-burgundy);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-story p {
+  color: var(--color-charcoal);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.about-story .bon-appetit {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-burgundy);
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.about-values {
+  margin-bottom: 3rem;
+}
+
+.about-values h2 {
+  color: var(--color-charcoal);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.value-card {
+  background: white;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.value-card h3 {
+  color: var(--color-burgundy);
+  margin-bottom: 0.5rem;
+}
+
+.value-card p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.about-services {
+  background: white;
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-services h2 {
+  color: var(--color-burgundy);
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-services li {
+  color: var(--color-charcoal);
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.about-services li:last-child {
+  border-bottom: none;
+}
+
+.about-services li::before {
+  content: '✓';
+  color: var(--color-burgundy);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .about-story,
+  .about-services {
+    padding: 2rem;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}

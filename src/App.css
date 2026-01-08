@@ -6,8 +6,9 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  color: var(--color-charcoal);
   line-height: 1.6;
+  background-color: var(--color-cream);
 }
 
 #root {
@@ -41,24 +42,24 @@ body {
 }
 
 .btn-primary {
-  background-color: #ff69b4;
+  background-color: var(--color-gold);
   color: white;
 }
 
 .btn-primary:hover {
-  background-color: #ff1493;
+  background-color: var(--color-gold-dark);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+  box-shadow: 0 5px 15px rgba(201, 162, 77, 0.3);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: #ff69b4;
-  border: 2px solid #ff69b4;
+  color: var(--color-burgundy);
+  border: 2px solid var(--color-burgundy);
 }
 
 .btn-secondary:hover {
-  background-color: #ff69b4;
+  background-color: var(--color-burgundy);
   color: white;
 }
 
@@ -81,7 +82,7 @@ body {
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: var(--color-charcoal);
   font-weight: 500;
 }
 
@@ -101,7 +102,7 @@ body {
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #ff69b4;
+  border-color: var(--color-burgundy);
 }
 
 .form-row {
@@ -116,10 +117,10 @@ body {
 
 .form-section h2 {
   font-size: 1.5rem;
-  color: #333;
+  color: var(--color-charcoal);
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #ff69b4;
+  border-bottom: 2px solid var(--color-burgundy);
 }
 
 /* Summary Styles */
@@ -140,7 +141,7 @@ body {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #333;
+  color: var(--color-charcoal);
 }
 
 /* Responsive Design */
@@ -172,10 +173,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff69b4;
+  background: var(--color-burgundy);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff1493;
+  background: var(--color-burgundy-dark);
 }

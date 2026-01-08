@@ -1,14 +1,14 @@
 .cart-page {
   min-height: 100vh;
   padding: 3rem 2rem;
-  background-color: #f9f9f9;
+  background-color: var(--color-cream);
 }
 
 .page-title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: #333;
+  color: var(--color-charcoal);
 }
 
 .empty-cart {
@@ -26,7 +26,7 @@
 }
 
 .empty-cart h2 {
-  color: #333;
+  color: var(--color-charcoal);
   margin-bottom: 0.5rem;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .cart-item-details h3 {
-  color: #333;
+  color: var(--color-charcoal);
   margin-bottom: 0.5rem;
 }
 
@@ -81,7 +81,7 @@
 }
 
 .item-price {
-  color: #ff69b4;
+  color: var(--color-burgundy);
   font-weight: bold;
 }
 
@@ -102,7 +102,7 @@
 }
 
 .quantity-btn {
-  background-color: #ff69b4;
+  background-color: var(--color-burgundy);
   color: white;
   border: none;
   width: 30px;
@@ -117,7 +117,7 @@
 }
 
 .quantity-btn:hover {
-  background-color: #ff1493;
+  background-color: var(--color-burgundy-dark);
 }
 
 .quantity {
@@ -129,7 +129,7 @@
 .item-total {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #333;
+  color: var(--color-charcoal);
 }
 
 .remove-btn {
@@ -157,7 +157,7 @@
 
 .cart-summary h2 {
   margin-bottom: 1.5rem;
-  color: #333;
+  color: var(--color-charcoal);
 }
 
 .summary-row {
@@ -175,7 +175,7 @@
 .summary-row.total {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #ff69b4;
+  color: var(--color-burgundy);
 }
 
 .btn-block {

@@ -1,13 +1,16 @@
 .custom-order-page {
   min-height: 100vh;
-  background-color: #f9f9f9;
+  background-color: var(--color-cream);
 }
 
 .custom-order-header {
-  background: linear-gradient(135deg, #ffb6c1 0%, #ff69b4 100%);
   color: white;
   padding: 4rem 2rem;
   text-align: center;
+  background: linear-gradient(135deg, var(--color-burgundy) 0%, var(--color-burgundy-dark) 100%);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .custom-order-header h1 {
@@ -30,7 +33,7 @@
 
 .custom-order-intro h2 {
   text-align: center;
-  color: #333;
+  color: var(--color-charcoal);
   font-size: 2rem;
   margin-bottom: 2rem;
 }
@@ -48,7 +51,7 @@
 .step-number {
   width: 60px;
   height: 60px;
-  background-color: #ff69b4;
+  background-color: var(--color-burgundy);
   color: white;
   border-radius: 50%;
   display: flex;
@@ -60,7 +63,7 @@
 }
 
 .step h3 {
-  color: #333;
+  color: var(--color-charcoal);
   margin-bottom: 0.5rem;
 }
 
@@ -79,7 +82,7 @@
 
 .custom-order-form small {
   display: block;
-  color: #ff69b4;
+  color: var(--color-burgundy);
   font-size: 0.85rem;
   margin-top: 0.3rem;
 }
@@ -109,7 +112,7 @@
 }
 
 .order-success h2 {
-  color: #333;
+  color: var(--color-charcoal);
   margin-bottom: 1rem;
 }
 
@@ -120,7 +123,7 @@
 }
 
 .order-details {
-  background-color: #fff5f8;
+  background-color: #f5ebe0;
   padding: 1rem;
   border-radius: 8px;
   margin-top: 1.5rem;

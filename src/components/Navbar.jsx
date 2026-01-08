@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
+import chimuLogo from '../pages/chimu_cakes.png';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -9,9 +10,13 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          🎂 Chimu Cakes <span className="nav-handle">@chimu_cakes</span>
+          <img src={chimuLogo} alt="Chimu Cakes" className="nav-logo-img" />
+          Chimu Cakes
         </Link>
         <ul className="nav-menu">
+          <li className="nav-item">
+            <Link to="/about" className="nav-link">About</Link>
+          </li>
           <li className="nav-item">
             <Link to="/" className="nav-link">Home</Link>
           </li>

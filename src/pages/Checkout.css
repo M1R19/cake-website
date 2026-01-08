@@ -1,7 +1,7 @@
 .checkout-page {
   min-height: 100vh;
   padding: 3rem 2rem;
-  background-color: #f9f9f9;
+  background-color: var(--color-cream);
 }
 
 .checkout-content {
@@ -25,10 +25,10 @@
 
 .form-section h2 {
   font-size: 1.5rem;
-  color: #333;
+  color: var(--color-charcoal);
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #ff69b4;
+  border-bottom: 2px solid var(--color-burgundy);
 }
 
 .form-group {
@@ -38,7 +38,7 @@
 .form-group label {
   display: block;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: var(--color-charcoal);
   font-weight: 500;
 }
 
@@ -57,7 +57,7 @@
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #ff69b4;
+  border-color: var(--color-burgundy);
 }
 
 .form-row {
@@ -84,8 +84,8 @@
 }
 
 .radio-label:hover {
-  border-color: #ff69b4;
-  background-color: #fff5f8;
+  border-color: var(--color-burgundy);
+  background-color: #f5ebe0;
 }
 
 .radio-label input[type="radio"] {
@@ -105,7 +105,7 @@
 
 .order-summary h2 {
   margin-bottom: 1.5rem;
-  color: #333;
+  color: var(--color-charcoal);
 }
 
 .summary-items {
@@ -153,7 +153,7 @@
 }
 
 .order-success h2 {
-  color: #333;
+  color: var(--color-charcoal);
   margin-bottom: 1rem;
 }
 
@@ -163,7 +163,7 @@
 }
 
 .redirect-text {
-  color: #ff69b4;
+  color: var(--color-burgundy);
   font-style: italic;
   margin-top: 1rem;
 }

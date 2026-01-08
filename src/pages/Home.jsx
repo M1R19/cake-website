@@ -32,13 +32,13 @@ const Home = () => {
             </div>
             <div className="feature-card">
               <div className="feature-icon">🚚</div>
-              <h3>Fast Delivery</h3>
-              <p>Same-day delivery available for orders placed before 2 PM</p>
+              <h3>Free Home Delivery</h3>
+              <p>Order ahead of time and get free delivery on us</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">✨</div>
               <h3>Custom Designs</h3>
-              <p>Create your dream cake with our custom order service</p>
+              <p>We take orders for Baby showers, Weddings, Engagements, Bride/Groom to be and many more customized cakes</p>
             </div>
             <div className="feature-card">
               <div className="feature-icon">💝</div>

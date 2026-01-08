@@ -1,13 +1,16 @@
 .contact-page {
   min-height: 100vh;
-  background-color: #f9f9f9;
+  background-color: var(--color-cream);
 }
 
 .contact-header {
-  background: linear-gradient(135deg, #ffb6c1 0%, #ff69b4 100%);
   color: white;
   padding: 4rem 2rem;
   text-align: center;
+  background: linear-gradient(135deg, var(--color-burgundy) 0%, var(--color-burgundy-dark) 100%);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .contact-header h1 {
@@ -35,7 +38,7 @@
 
 .contact-info h2 {
   font-size: 2rem;
-  color: #333;
+  color: var(--color-charcoal);
   margin-bottom: 0.5rem;
 }
 
@@ -56,7 +59,7 @@
 }
 
 .info-item h3 {
-  color: #ff69b4;
+  color: var(--color-burgundy);
   margin-bottom: 0.3rem;
   font-size: 1.2rem;
 }
@@ -71,7 +74,7 @@
 }
 
 .social-links h3 {
-  color: #333;
+  color: var(--color-charcoal);
   margin-bottom: 1rem;
 }
 
@@ -83,7 +86,7 @@
 .social-icon {
   width: 50px;
   height: 50px;
-  background-color: #ff69b4;
+  background-color: var(--color-burgundy);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -94,7 +97,7 @@
 }
 
 .social-icon:hover {
-  background-color: #ff1493;
+  background-color: var(--color-burgundy-dark);
   transform: translateY(-3px);
 }
 
@@ -107,7 +110,7 @@
 }
 
 .contact-form h2 {
-  color: #333;
+  color: var(--color-charcoal);
   margin-bottom: 1.5rem;
 }
 
@@ -131,7 +134,7 @@
 }
 
 .form-success h2 {
-  color: #333;
+  color: var(--color-charcoal);
   margin-bottom: 0.5rem;
 }
 
