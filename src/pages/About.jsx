@@ -1,4 +1,7 @@
 import './About.css';
+import renderImage from '../assets/render_image.png';
+import CakeScene3D from '../components/CakeScene3D';
+import '../components/CakeScene3D.css';
 
 const About = () => {
   return (
@@ -10,29 +13,35 @@ const About = () => {
 
       <div className="container">
         <section className="about-content">
-          <div className="about-story">
-            <h2>Our Story</h2>
-            <p>
-              Trunali's journey began in a home kitchen, where baking was more than a skill—it was a source of joy, creativity, and connection.
-            </p>
-            <p>
-              What started as a small dream has grown into a larger vision: to build a global cake brand that finds a place in every home and every heart.
-            </p>
-            <p>
-              At Chimu's Cake, our goal has always been simple yet meaningful—to serve delicious, high-quality cakes at a price that brings happiness without hurting your wallet. Every cake is made with care, using fresh, thoughtfully selected ingredients that truly stand out in taste and quality.
-            </p>
-            <p>
-              Our menu offers a wide range of flavors, from rich Indian classics to beloved international favorites. Alongside our curated selection, we proudly accept custom and special requests—because your vision matters to us.
-            </p>
-            <p>
-              Whether you visit our store or order through WhatsApp, Instagram, or our website, we promise a delightful experience from the first bite to the last.
-            </p>
-            <p>
-              Your request is our command. We bake with love, so you can celebrate with joy.
-            </p>
-            <p className="bon-appetit">
-              Bon Appétit! 🍰
-            </p>
+          <div className="about-story-section">
+            <div className="story-image-3d">
+              <CakeScene3D imageUrl={renderImage} />
+              <p className="interaction-hint">Move your mouse to interact</p>
+            </div>
+            <div className="about-story">
+              <h2>Our Story</h2>
+              <p>
+                Trunali's journey began in a home kitchen, where baking was more than a skill—it was a source of joy, creativity, and connection.
+              </p>
+              <p>
+                What started as a small dream has grown into a larger vision: to build a global cake brand that finds a place in every home and every heart.
+              </p>
+              <p>
+                At Chimu's Cake, our goal has always been simple yet meaningful—to serve delicious, high-quality cakes at a price that brings happiness without hurting your wallet. Every cake is made with care, using fresh, thoughtfully selected ingredients that truly stand out in taste and quality.
+              </p>
+              <p>
+                Our menu offers a wide range of flavors, from rich Indian classics to beloved international favorites. Alongside our curated selection, we proudly accept custom and special requests—because your vision matters to us.
+              </p>
+              <p>
+                Whether you visit our store or order through WhatsApp, Instagram, or our website, we promise a delightful experience from the first bite to the last.
+              </p>
+              <p>
+                Your request is our command. We bake with love, so you can celebrate with joy.
+              </p>
+              <p className="bon-appetit">
+                Bon Appétit! 🍰
+              </p>
+            </div>
           </div>
 
           <div className="about-values">

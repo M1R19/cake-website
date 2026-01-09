@@ -1,0 +1,51 @@
+.cake-scene-container {
+  width: 420px;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  cursor: grab;
+  position: relative;
+  background: transparent;
+}
+
+.cake-scene-container:active {
+  cursor: grabbing;
+}
+
+
+/* Loading state */
+.cake-scene-container canvas {
+  opacity: 0;
+  animation: fadeInCanvas 1s ease-out 0.5s forwards;
+}
+
+@keyframes fadeInCanvas {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .cake-scene-container {
+    width: 100%;
+    max-width: 450px;
+    height: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cake-scene-container {
+    height: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cake-scene-container {
+    height: 400px;
+  }
+}
