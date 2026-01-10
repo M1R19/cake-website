@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import ShareButton from '../components/ShareButton';
+import SEO from '../components/SEO';
 import './Products.css';
 
 const productsData = [
@@ -371,6 +373,10 @@ const Products = () => {
 
   return (
     <div className="products-page">
+      <SEO
+        title="Products"
+        description="Browse our delicious cake collection - chocolate, vanilla, fruit, exotic Indian flavors, and premium cakes. Order via WhatsApp!"
+      />
       <div className="products-header">
         <h1>Our Delicious Cakes</h1>
         <p>Choose from our selection of freshly baked cakes</p>
@@ -408,6 +414,11 @@ const Products = () => {
 
             return (
               <div key={product.id} className="product-card">
+                <ShareButton
+                  className="product-share"
+                  title={`${product.name} Cake - Chimu Cakes`}
+                  text={`Check out this ${product.name} cake from Chimu Cakes! Starting at ₹${product.prices.half || product.prices.bento}`}
+                />
                 <div className="product-image">{product.image}</div>
                 <h3 className="product-name">{product.name}</h3>
                 <p className="product-description">{product.description}</p>

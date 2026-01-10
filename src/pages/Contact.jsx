@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SEO from '../components/SEO';
 import './Contact.css';
 
 const Contact = () => {
@@ -29,6 +30,10 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
+      <SEO
+        title="Contact"
+        description="Contact Chimu Cakes for orders, inquiries, or custom cake requests. Located in Virar West. Call or WhatsApp us today!"
+      />
       <div className="contact-header">
         <h1>Contact Us</h1>
         <p>We'd love to hear from you!</p>

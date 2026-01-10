@@ -10,8 +10,12 @@ import Contact from './pages/Contact';
 import CustomOrder from './pages/CustomOrder';
 import AdminLogin from './pages/AdminLogin';
 import AdminDashboard from './pages/AdminDashboard';
+import NotFound from './pages/NotFound';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import Footer from './components/Footer';
+import ShareButton from './components/ShareButton';
+import ScrollToTop from './components/ScrollToTop';
+import PageLoader from './components/PageLoader';
 import './App.css';
 
 function AppContent() {
@@ -20,6 +24,8 @@ function AppContent() {
 
   return (
     <div className="App">
+      <ScrollToTop />
+      <PageLoader />
       {!isAdminRoute && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
@@ -30,8 +36,10 @@ function AppContent() {
         <Route path="/custom-order" element={<CustomOrder />} />
         <Route path="/admin" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       {!isAdminRoute && <Footer />}
+      {!isAdminRoute && <ShareButton className="floating" />}
       {!isAdminRoute && <FloatingWhatsApp />}
     </div>
   );

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SEO from '../components/SEO';
 import './CustomOrder.css';
 
 const CustomOrder = () => {
@@ -69,6 +70,10 @@ const CustomOrder = () => {
 
   return (
     <div className="custom-order-page">
+      <SEO
+        title="Custom Order"
+        description="Order a custom cake from Chimu Cakes. Design your dream cake for birthdays, weddings, anniversaries and special occasions. We'll make it happen!"
+      />
       <div className="custom-order-header">
         <h1>Custom Cake Order</h1>
         <p>Design your dream cake - We'll make it happen!</p>

@@ -1,4 +1,5 @@
 import './OurCreations.css';
+import SEO from '../components/SEO';
 import img1 from '../assets/Screenshot 2026-01-09 122545.png';
 import img2 from '../assets/Screenshot 2026-01-09 122602.png';
 import img3 from '../assets/Screenshot 2026-01-09 122614.png';
@@ -18,6 +19,10 @@ function OurCreations() {
 
   return (
     <div className="our-creations-page">
+      <SEO
+        title="Our Creations"
+        description="View our gallery of beautiful handcrafted cakes - birthday cakes, wedding cakes, custom designs and more from Chimu Cakes."
+      />
       <div className="our-creations-header">
         <h1>Our Creations</h1>
         <p>A glimpse of our delicious handcrafted cakes</p>

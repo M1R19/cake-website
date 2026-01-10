@@ -1,0 +1,118 @@
+.share-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.share-button:hover {
+  background: var(--color-burgundy);
+  border-color: var(--color-burgundy);
+}
+
+.share-button:hover svg {
+  stroke: white;
+}
+
+.share-button svg {
+  width: 18px;
+  height: 18px;
+  stroke: #666;
+  transition: stroke 0.3s ease;
+}
+
+.share-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-charcoal);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  margin-bottom: 8px;
+  animation: fadeIn 0.3s ease;
+}
+
+.share-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--color-charcoal) transparent transparent transparent;
+}
+
+/* Floating share button variant */
+.share-button.floating {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: white;
+  border: none;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+}
+
+.share-button.floating svg {
+  width: 22px;
+  height: 22px;
+  stroke: var(--color-burgundy);
+}
+
+.share-button.floating:hover {
+  background: var(--color-burgundy);
+  transform: scale(1.1);
+}
+
+.share-button.floating:hover svg {
+  stroke: white;
+}
+
+/* Product card share button */
+.share-button.product-share {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .share-button.floating {
+    bottom: 90px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .share-button.floating svg {
+    width: 20px;
+    height: 20px;
+  }
+}

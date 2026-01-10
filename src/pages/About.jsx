@@ -1,11 +1,16 @@
 import './About.css';
 import renderImage from '../assets/render_image.png';
 import CakeScene3D from '../components/CakeScene3D';
+import SEO from '../components/SEO';
 import '../components/CakeScene3D.css';
 
 const About = () => {
   return (
     <div className="about-page">
+      <SEO
+        title="About Us"
+        description="Learn about Chimu Cakes - our story, passion for baking, and commitment to creating delicious homemade cakes for every occasion."
+      />
       <section className="about-header">
         <h1>About Chimu Cakes</h1>
         <p>Crafting sweet memories since day one</p>

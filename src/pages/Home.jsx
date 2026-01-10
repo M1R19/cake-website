@@ -1,10 +1,15 @@
 import { Link } from 'react-router-dom';
 import InstagramFeed from '../components/InstagramFeed';
+import SEO from '../components/SEO';
 import './Home.css';
 
 const Home = () => {
   return (
     <div className="home">
+      <SEO
+        title="Home"
+        description="Order delicious homemade cakes from Chimu Cakes. Fresh daily baked cakes for birthdays, weddings, and special occasions. Free delivery available!"
+      />
       <section className="hero">
         <div className="hero-content">
           <h1 className="hero-title">Welcome to Chimu Cakes</h1>
