@@ -1,0 +1,139 @@
+.admin-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-burgundy) 0%, var(--color-burgundy-dark) 100%);
+  padding: 2rem;
+}
+
+.admin-login-container {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.admin-login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.admin-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.admin-login-header h1 {
+  color: var(--color-burgundy);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.admin-login-header p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.admin-login-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.admin-login-form label {
+  display: block;
+  color: var(--color-charcoal);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.admin-login-form input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.admin-login-form input:focus {
+  outline: none;
+  border-color: var(--color-burgundy);
+  box-shadow: 0 0 0 3px rgba(114, 47, 55, 0.1);
+}
+
+.login-error {
+  background: #fee;
+  color: #c00;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+  animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.btn-admin-login {
+  width: 100%;
+  padding: 1rem;
+  background: var(--color-burgundy);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-admin-login:hover:not(:disabled) {
+  background: var(--color-burgundy-dark);
+  transform: translateY(-2px);
+}
+
+.btn-admin-login:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.admin-login-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.admin-login-footer p {
+  color: #999;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+  .admin-login-container {
+    padding: 2rem;
+  }
+
+  .admin-login-header h1 {
+    font-size: 1.5rem;
+  }
+}

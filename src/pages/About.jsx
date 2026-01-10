@@ -44,6 +44,27 @@ const About = () => {
             </div>
           </div>
 
+          <div className="customer-reviews">
+            <h2>What Our Customers Say</h2>
+            <div className="reviews-grid">
+              <div className="review-card">
+                <div className="review-stars">★★★★★</div>
+                <p className="review-text">"The best cake I've ever had! The chocolate truffle was absolutely divine. Will definitely order again!"</p>
+                <div className="review-author">— Priya S.</div>
+              </div>
+              <div className="review-card">
+                <div className="review-stars">★★★★★</div>
+                <p className="review-text">"Ordered a custom cake for my daughter's birthday. The design was perfect and it tasted amazing!"</p>
+                <div className="review-author">— Rahul M.</div>
+              </div>
+              <div className="review-card">
+                <div className="review-stars">★★★★★</div>
+                <p className="review-text">"Fresh ingredients, beautiful presentation, and delivered on time. Chimu Cakes never disappoints!"</p>
+                <div className="review-author">— Sneha K.</div>
+              </div>
+            </div>
+          </div>
+
           <div className="about-values">
             <h2>What We Stand For</h2>
             <div className="values-grid">
