@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useCart } from '../context/CartContext';
 import './Products.css';
 
 const productsData = [
@@ -333,9 +332,7 @@ const productsData = [
 ];
 
 const Products = () => {
-  const { addToCart } = useCart();
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [addedToCart, setAddedToCart] = useState(null);
   const [selectedSizes, setSelectedSizes] = useState({});
 
   const categories = ['all', 'regular', 'fruit', 'exotic', 'premium'];
@@ -351,26 +348,25 @@ const Products = () => {
     });
   };
 
-  const handleAddToCart = (product) => {
+  const handleEnquire = (product) => {
     const hasBento = product.prices.bento !== undefined;
     const selectedSize = selectedSizes[product.id] || 'half-kg';
-    let adjustedPrice;
+    let displaySize, displayPrice;
 
-    if (selectedSize === 'bento' && hasBento) adjustedPrice = product.prices.bento;
-    else if (selectedSize === 'half-kg') adjustedPrice = product.prices.half;
-    else if (selectedSize === '1-kg') adjustedPrice = product.prices.oneKg;
+    if (selectedSize === 'bento' && hasBento) {
+      displaySize = 'Bento';
+      displayPrice = product.prices.bento;
+    } else if (selectedSize === 'half-kg') {
+      displaySize = 'Half Kg';
+      displayPrice = product.prices.half;
+    } else {
+      displaySize = '1 Kg';
+      displayPrice = product.prices.oneKg;
+    }
 
-    const productWithSize = {
-      ...product,
-      price: adjustedPrice,
-      size: selectedSize,
-      displaySize: selectedSize === 'bento' ? 'Bento' : selectedSize === 'half-kg' ? 'Half Kg' : '1 Kg',
-      id: `${product.id}-${selectedSize}` // Unique ID for each size variant
-    };
-
-    addToCart(productWithSize);
-    setAddedToCart(product.id);
-    setTimeout(() => setAddedToCart(null), 2000);
+    const message = `Hi! I'm interested in ordering:%0A%0A*${product.name}*%0ASize: ${displaySize}%0APrice: ₹${displayPrice}%0A%0APlease let me know the availability and delivery details.`;
+    const whatsappUrl = `https://wa.me/919764872991?text=${message}`;
+    window.open(whatsappUrl, '_blank');
   };
 
   return (
@@ -431,10 +427,10 @@ const Products = () => {
                 <div className="product-footer">
                   <span className="product-price">₹{displayPrice}</span>
                   <button
-                    className={`add-to-cart-btn ${addedToCart === product.id ? 'added' : ''}`}
-                    onClick={() => handleAddToCart(product)}
+                    className="enquire-btn"
+                    onClick={() => handleEnquire(product)}
                   >
-                    {addedToCart === product.id ? '✓ Added!' : 'Add to Cart'}
+                    Enquire Now
                   </button>
                 </div>
               </div>

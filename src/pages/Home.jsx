@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import InstagramFeed from '../components/InstagramFeed';
 import './Home.css';
 
 const Home = () => {
@@ -48,6 +49,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <InstagramFeed />
 
       <section className="cta-section">
         <div className="container">

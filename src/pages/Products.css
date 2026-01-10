@@ -152,24 +152,23 @@
   color: var(--color-burgundy);
 }
 
-.add-to-cart-btn {
+.enquire-btn {
   padding: 0.7rem 1.5rem;
-  background-color: var(--color-gold);
+  background-color: var(--color-burgundy);
   color: white;
   border: none;
   border-radius: 25px;
   cursor: pointer;
   font-weight: bold;
   transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.add-to-cart-btn:hover {
-  background-color: var(--color-gold-dark);
+.enquire-btn:hover {
+  background-color: var(--color-burgundy-dark);
   transform: scale(1.05);
-}
-
-.add-to-cart-btn.added {
-  background-color: #4caf50;
 }
 
 @media (max-width: 768px) {
